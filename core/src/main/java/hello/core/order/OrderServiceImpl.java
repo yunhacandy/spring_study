@@ -22,4 +22,13 @@ public class OrderServiceImpl implements OrderService {
 
         return new Order(memberId, itemName, itemPrice, discountPrice);
     }
+
+    public DiscountPolicy getDiscountPolicy() {
+        return discountPolicy;
+    }
+
+    //내가 추가함 (놓친건가)
+    public MemberRepository getMemberRepository() {
+        return memberRepository;
+    }
 }
