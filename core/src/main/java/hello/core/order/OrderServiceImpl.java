@@ -4,6 +4,7 @@ import hello.core.discount.DiscountPolicy;
 import hello.core.member.Member;
 import hello.core.member.MemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -27,11 +28,7 @@ public class OrderServiceImpl implements OrderService {
         return new Order(memberId, itemName, itemPrice, discountPrice);
     }
 
-    public DiscountPolicy getDiscountPolicy() {
-        return discountPolicy;
-    }
-
-    //내가 추가함 (놓친건가)
+    //테스트 용도
     public MemberRepository getMemberRepository() {
         return memberRepository;
     }
